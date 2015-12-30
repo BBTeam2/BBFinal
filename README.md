@@ -1,2 +1,4 @@
 # BBFinal
-Final
+Final project for iOS training course.  Project will last for 2 weeks where each team will use agile scrum to complete and monitor progress.  GitHub will be used as the version control system to examine changes through the project lifespan.  Brief description of project is provided below:
+
+_Food application that can track the time it takes to make certain meals. We will be saving recipes and times internally. We will grab the current lat and long to find the current weather and offer some suggestions based on the current temperature. People will be able to post there creations on social media via there camera or a prebuilt recipe picture. There will be a timer that will make a sound whenever the next step of cooking will commence or finish. We will have a predefined database that will hold a default amount of receipes. Users will be able to add internally what they made and that will be added to the database._
