@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  AllReceipeVC.m
 //  CookingAppDgn
 //
 //  Created by iOS on 1/4/16.
 //  Copyright © 2016 unlimited. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AllReceipeVC.h"
 
-@interface ViewController ()
+@interface AllReceipeVC ()
 
 @end
 
-@implementation ViewController
+@implementation AllReceipeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

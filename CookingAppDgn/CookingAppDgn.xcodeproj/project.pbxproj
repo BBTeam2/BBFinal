@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		81E55B091C3B079D00AF431B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B081C3B079D00AF431B /* main.m */; };
 		81E55B0C1C3B079D00AF431B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B0B1C3B079D00AF431B /* AppDelegate.m */; };
-		81E55B0F1C3B079D00AF431B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B0E1C3B079D00AF431B /* ViewController.m */; };
+		81E55B0F1C3B079D00AF431B /* AllReceipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B0E1C3B079D00AF431B /* AllReceipeVC.m */; };
 		81E55B121C3B079D00AF431B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B101C3B079D00AF431B /* Main.storyboard */; };
 		81E55B141C3B079D00AF431B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B131C3B079D00AF431B /* Assets.xcassets */; };
 		81E55B171C3B079D00AF431B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B151C3B079D00AF431B /* LaunchScreen.storyboard */; };
+		B8717C641C41AE3100CDA285 /* SuggestedReceipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C631C41AE3100CDA285 /* SuggestedReceipeVC.m */; };
+		B8717C691C41AF1600CDA285 /* CurrentSelectedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C681C41AF1600CDA285 /* CurrentSelectedVC.m */; };
+		B8717C6C1C41B00100CDA285 /* StepsMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C6B1C41B00100CDA285 /* StepsMainVC.m */; };
+		B8717C6F1C41B11F00CDA285 /* CompleteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C6E1C41B11F00CDA285 /* CompleteVC.m */; };
+		B8717C721C41B54F00CDA285 /* StartNewReceipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C711C41B54F00CDA285 /* StartNewReceipeVC.m */; };
+		B8717C751C41BCD600CDA285 /* AddIngredientsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C741C41BCD600CDA285 /* AddIngredientsVC.m */; };
+		B8717C781C41BD8F00CDA285 /* AddStepsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C771C41BD8F00CDA285 /* AddStepsVC.m */; };
+		B8717C7E1C41BE5800CDA285 /* SetupStepVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C7D1C41BE5800CDA285 /* SetupStepVC.m */; };
+		B8717C821C41C72E00CDA285 /* ReceipeDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C811C41C72E00CDA285 /* ReceipeDisplayCell.m */; };
+		B8717C851C41C97400CDA285 /* SugReceipeCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C841C41C97400CDA285 /* SugReceipeCustomCell.m */; };
+		B8717C8B1C41CCF600CDA285 /* StepTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C8A1C41CCF600CDA285 /* StepTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +31,34 @@
 		81E55B081C3B079D00AF431B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81E55B0A1C3B079D00AF431B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81E55B0B1C3B079D00AF431B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		81E55B0D1C3B079D00AF431B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		81E55B0E1C3B079D00AF431B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		81E55B0D1C3B079D00AF431B /* AllReceipeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllReceipeVC.h; path = CookingAppDgn/AllReceipeVC.h; sourceTree = "<group>"; };
+		81E55B0E1C3B079D00AF431B /* AllReceipeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AllReceipeVC.m; path = CookingAppDgn/AllReceipeVC.m; sourceTree = "<group>"; };
 		81E55B111C3B079D00AF431B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81E55B131C3B079D00AF431B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81E55B161C3B079D00AF431B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E55B181C3B079D00AF431B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8717C621C41AE3100CDA285 /* SuggestedReceipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestedReceipeVC.h; sourceTree = "<group>"; };
+		B8717C631C41AE3100CDA285 /* SuggestedReceipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestedReceipeVC.m; sourceTree = "<group>"; };
+		B8717C671C41AF1600CDA285 /* CurrentSelectedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSelectedVC.h; sourceTree = "<group>"; };
+		B8717C681C41AF1600CDA285 /* CurrentSelectedVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSelectedVC.m; sourceTree = "<group>"; };
+		B8717C6A1C41B00100CDA285 /* StepsMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepsMainVC.h; sourceTree = "<group>"; };
+		B8717C6B1C41B00100CDA285 /* StepsMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepsMainVC.m; sourceTree = "<group>"; };
+		B8717C6D1C41B11F00CDA285 /* CompleteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteVC.h; sourceTree = "<group>"; };
+		B8717C6E1C41B11F00CDA285 /* CompleteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteVC.m; sourceTree = "<group>"; };
+		B8717C701C41B54F00CDA285 /* StartNewReceipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartNewReceipeVC.h; sourceTree = "<group>"; };
+		B8717C711C41B54F00CDA285 /* StartNewReceipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartNewReceipeVC.m; sourceTree = "<group>"; };
+		B8717C731C41BCD600CDA285 /* AddIngredientsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddIngredientsVC.h; sourceTree = "<group>"; };
+		B8717C741C41BCD600CDA285 /* AddIngredientsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddIngredientsVC.m; sourceTree = "<group>"; };
+		B8717C761C41BD8F00CDA285 /* AddStepsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddStepsVC.h; sourceTree = "<group>"; };
+		B8717C771C41BD8F00CDA285 /* AddStepsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddStepsVC.m; sourceTree = "<group>"; };
+		B8717C7C1C41BE5800CDA285 /* SetupStepVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupStepVC.h; sourceTree = "<group>"; };
+		B8717C7D1C41BE5800CDA285 /* SetupStepVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupStepVC.m; sourceTree = "<group>"; };
+		B8717C801C41C72E00CDA285 /* ReceipeDisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReceipeDisplayCell.h; sourceTree = "<group>"; };
+		B8717C811C41C72E00CDA285 /* ReceipeDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReceipeDisplayCell.m; sourceTree = "<group>"; };
+		B8717C831C41C97400CDA285 /* SugReceipeCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SugReceipeCustomCell.h; sourceTree = "<group>"; };
+		B8717C841C41C97400CDA285 /* SugReceipeCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SugReceipeCustomCell.m; sourceTree = "<group>"; };
+		B8717C891C41CCF600CDA285 /* StepTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepTableViewCell.h; sourceTree = "<group>"; };
+		B8717C8A1C41CCF600CDA285 /* StepTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +75,7 @@
 		81E55AFB1C3B079C00AF431B = {
 			isa = PBXGroup;
 			children = (
+				B8717C661C41AEBF00CDA285 /* ViewControllers */,
 				81E55B061C3B079C00AF431B /* CookingAppDgn */,
 				81E55B051C3B079C00AF431B /* Products */,
 			);
@@ -58,10 +92,6 @@
 		81E55B061C3B079C00AF431B /* CookingAppDgn */ = {
 			isa = PBXGroup;
 			children = (
-				81E55B0A1C3B079D00AF431B /* AppDelegate.h */,
-				81E55B0B1C3B079D00AF431B /* AppDelegate.m */,
-				81E55B0D1C3B079D00AF431B /* ViewController.h */,
-				81E55B0E1C3B079D00AF431B /* ViewController.m */,
 				81E55B101C3B079D00AF431B /* Main.storyboard */,
 				81E55B131C3B079D00AF431B /* Assets.xcassets */,
 				81E55B151C3B079D00AF431B /* LaunchScreen.storyboard */,
@@ -74,9 +104,98 @@
 		81E55B071C3B079D00AF431B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				81E55B0A1C3B079D00AF431B /* AppDelegate.h */,
+				81E55B0B1C3B079D00AF431B /* AppDelegate.m */,
 				81E55B081C3B079D00AF431B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B8717C5F1C41AB9700CDA285 /* First Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C7F1C41C29F00CDA285 /* CustomTableViewCell */,
+				81E55B0D1C3B079D00AF431B /* AllReceipeVC.h */,
+				81E55B0E1C3B079D00AF431B /* AllReceipeVC.m */,
+			);
+			name = "First Tab";
+			sourceTree = "<group>";
+		};
+		B8717C601C41ABA300CDA285 /* Second Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C621C41AE3100CDA285 /* SuggestedReceipeVC.h */,
+				B8717C631C41AE3100CDA285 /* SuggestedReceipeVC.m */,
+				B8717C861C41C97A00CDA285 /* CustomTableViewCell */,
+			);
+			name = "Second Tab";
+			sourceTree = "<group>";
+		};
+		B8717C611C41ABB100CDA285 /* Third Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C701C41B54F00CDA285 /* StartNewReceipeVC.h */,
+				B8717C711C41B54F00CDA285 /* StartNewReceipeVC.m */,
+				B8717C731C41BCD600CDA285 /* AddIngredientsVC.h */,
+				B8717C741C41BCD600CDA285 /* AddIngredientsVC.m */,
+				B8717C761C41BD8F00CDA285 /* AddStepsVC.h */,
+				B8717C771C41BD8F00CDA285 /* AddStepsVC.m */,
+				B8717C7C1C41BE5800CDA285 /* SetupStepVC.h */,
+				B8717C7D1C41BE5800CDA285 /* SetupStepVC.m */,
+			);
+			name = "Third Tab";
+			sourceTree = "<group>";
+		};
+		B8717C651C41AE9C00CDA285 /* SharedVCBetweenTab1&2 */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C881C41CCD500CDA285 /* CustomTableViewCell */,
+				B8717C671C41AF1600CDA285 /* CurrentSelectedVC.h */,
+				B8717C681C41AF1600CDA285 /* CurrentSelectedVC.m */,
+				B8717C6A1C41B00100CDA285 /* StepsMainVC.h */,
+				B8717C6B1C41B00100CDA285 /* StepsMainVC.m */,
+				B8717C6D1C41B11F00CDA285 /* CompleteVC.h */,
+				B8717C6E1C41B11F00CDA285 /* CompleteVC.m */,
+			);
+			name = "SharedVCBetweenTab1&2";
+			sourceTree = "<group>";
+		};
+		B8717C661C41AEBF00CDA285 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C5F1C41AB9700CDA285 /* First Tab */,
+				B8717C651C41AE9C00CDA285 /* SharedVCBetweenTab1&2 */,
+				B8717C601C41ABA300CDA285 /* Second Tab */,
+				B8717C611C41ABB100CDA285 /* Third Tab */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B8717C7F1C41C29F00CDA285 /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C801C41C72E00CDA285 /* ReceipeDisplayCell.h */,
+				B8717C811C41C72E00CDA285 /* ReceipeDisplayCell.m */,
+			);
+			name = CustomTableViewCell;
+			sourceTree = "<group>";
+		};
+		B8717C861C41C97A00CDA285 /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C831C41C97400CDA285 /* SugReceipeCustomCell.h */,
+				B8717C841C41C97400CDA285 /* SugReceipeCustomCell.m */,
+			);
+			name = CustomTableViewCell;
+			sourceTree = "<group>";
+		};
+		B8717C881C41CCD500CDA285 /* CustomTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				B8717C891C41CCF600CDA285 /* StepTableViewCell.h */,
+				B8717C8A1C41CCF600CDA285 /* StepTableViewCell.m */,
+			);
+			name = CustomTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +268,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E55B0F1C3B079D00AF431B /* ViewController.m in Sources */,
+				B8717C751C41BCD600CDA285 /* AddIngredientsVC.m in Sources */,
+				B8717C7E1C41BE5800CDA285 /* SetupStepVC.m in Sources */,
+				B8717C821C41C72E00CDA285 /* ReceipeDisplayCell.m in Sources */,
+				B8717C691C41AF1600CDA285 /* CurrentSelectedVC.m in Sources */,
+				B8717C781C41BD8F00CDA285 /* AddStepsVC.m in Sources */,
+				B8717C851C41C97400CDA285 /* SugReceipeCustomCell.m in Sources */,
+				B8717C641C41AE3100CDA285 /* SuggestedReceipeVC.m in Sources */,
+				81E55B0F1C3B079D00AF431B /* AllReceipeVC.m in Sources */,
 				81E55B0C1C3B079D00AF431B /* AppDelegate.m in Sources */,
+				B8717C721C41B54F00CDA285 /* StartNewReceipeVC.m in Sources */,
+				B8717C6F1C41B11F00CDA285 /* CompleteVC.m in Sources */,
 				81E55B091C3B079D00AF431B /* main.m in Sources */,
+				B8717C6C1C41B00100CDA285 /* StepsMainVC.m in Sources */,
+				B8717C8B1C41CCF600CDA285 /* StepTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.unlimited.CookingAppDgn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -276,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.unlimited.CookingAppDgn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -298,6 +430,7 @@
 				81E55B1D1C3B079D00AF431B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
