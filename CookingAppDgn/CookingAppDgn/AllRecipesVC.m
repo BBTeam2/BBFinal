@@ -1,18 +1,18 @@
 //
-//  AllReceipeVC.m
+//  AllRecipeVC.m
 //  CookingAppDgn
 //
 //  Created by iOS on 1/4/16.
 //  Copyright © 2016 unlimited. All rights reserved.
 //
 
-#import "AllReceipeVC.h"
+#import "AllRecipesVC.h"
 
-@interface AllReceipeVC ()
+@interface AllRecipesVC ()
 
 @end
 
-@implementation AllReceipeVC
+@implementation AllRecipesVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

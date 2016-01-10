@@ -1,18 +1,18 @@
 //
-//  StartNewReceipeVC.m
+//  SuggestedRecipeVC.m
 //  CookingAppDgn
 //
 //  Created by MAC1 on 1/9/16.
 //  Copyright © 2016 unlimited. All rights reserved.
 //
 
-#import "StartNewReceipeVC.h"
+#import "SuggestedRecipeVC.h"
 
-@interface StartNewReceipeVC ()
+@interface SuggestedRecipeVC ()
 
 @end
 
-@implementation StartNewReceipeVC
+@implementation SuggestedRecipeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

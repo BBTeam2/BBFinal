@@ -1,5 +1,5 @@
 //
-//  ReceipeDisplayCell.h
+//  RecipeDisplayCell.h
 //  CookingAppDgn
 //
 //  Created by MAC1 on 1/9/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReceipeDisplayCell : UITableViewCell
+@interface RecipeDisplayCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *cellImageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descripLabel;

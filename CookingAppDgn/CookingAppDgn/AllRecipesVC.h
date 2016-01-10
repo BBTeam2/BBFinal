@@ -1,5 +1,5 @@
 //
-//  AllReceipeVC.h
+//  AllRecipeVC.h
 //  CookingAppDgn
 //
 //  Created by iOS on 1/4/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllReceipeVC : UIViewController
+@interface AllRecipesVC : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *allReceipeTableView;
 
 

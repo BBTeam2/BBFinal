@@ -1,14 +1,14 @@
 //
-//  ReceipeDisplayCell.m
+//  RecipeDisplayCell.m
 //  CookingAppDgn
 //
 //  Created by MAC1 on 1/9/16.
 //  Copyright © 2016 unlimited. All rights reserved.
 //
 
-#import "ReceipeDisplayCell.h"
+#import "RecipeDisplayCell.h"
 
-@implementation ReceipeDisplayCell
+@implementation RecipeDisplayCell
 
 - (void)awakeFromNib {
     // Initialization code

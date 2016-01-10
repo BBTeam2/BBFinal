@@ -1,5 +1,5 @@
 //
-//  SuggestedReceipeVC.h
+//  SuggestedRecipeVC.h
 //  CookingAppDgn
 //
 //  Created by MAC1 on 1/9/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SuggestedReceipeVC : UIViewController
+@interface SuggestedRecipeVC : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *suggestedReceipeTableView;
 
 @end

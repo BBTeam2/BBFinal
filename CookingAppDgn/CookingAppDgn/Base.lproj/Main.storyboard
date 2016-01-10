@@ -6,10 +6,10 @@
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--All Receipes-->
+        <!--All Recipes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AllReceipeVC" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AllRecipesVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllReceipeCell" rowHeight="127" id="KgK-jk-28T" customClass="ReceipeDisplayCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllReceipeCell" rowHeight="127" id="KgK-jk-28T" customClass="RecipeDisplayCell">
                                         <rect key="frame" x="0.0" y="92" width="600" height="127"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KgK-jk-28T" id="7jg-7U-nNP">
@@ -65,7 +65,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="All Receipes" id="iwC-1v-iQZ"/>
+                    <navigationItem key="navigationItem" title="All Recipes" id="iwC-1v-iQZ"/>
                     <connections>
                         <outlet property="allReceipeTableView" destination="acm-UW-D8c" id="Pu2-8k-zUa"/>
                     </connections>
@@ -134,14 +134,14 @@
                                                     <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OV1-Wx-POh">
                                                     <rect key="frame" x="15" y="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -307,7 +307,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post your creation on Social Media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRz-A9-kTG">
                                 <rect key="frame" x="164" y="339" width="272" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6A-hK-FNe">
@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="4685" y="-77"/>
         </scene>
-        <!--New Reciepe-->
+        <!--New Recipe-->
         <scene sceneID="bLi-N1-olp">
             <objects>
-                <viewController id="xms-Ey-ubK" customClass="StartNewReceipeVC" sceneMemberID="viewController">
+                <viewController id="xms-Ey-ubK" customClass="StartNewRecipeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1L1-ia-6an"/>
                         <viewControllerLayoutGuide type="bottom" id="Ola-nS-IJb"/>
@@ -392,7 +392,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Reciepe" id="tIF-AE-iEN">
+                    <navigationItem key="navigationItem" title="New Recipe" id="tIF-AE-iEN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yOC-sC-okJ">
                             <connections>
                                 <segue destination="0lF-bV-fyz" kind="push" id="j67-xq-6Z2"/>
@@ -473,14 +473,14 @@
                                                     <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tiz-9d-uLI">
                                                     <rect key="frame" x="15" y="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -535,14 +535,14 @@
                                                     <rect key="frame" x="15" y="5" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GQQ-15-85q">
                                                     <rect key="frame" x="15" y="25" width="41" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -633,7 +633,7 @@
         <!--Suggestions-->
         <scene sceneID="87i-Hl-mMh">
             <objects>
-                <viewController id="fd4-z0-d32" customClass="SuggestedReceipeVC" sceneMemberID="viewController">
+                <viewController id="fd4-z0-d32" customClass="SuggestedRecipeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S53-xa-vfW"/>
                         <viewControllerLayoutGuide type="bottom" id="tX2-Av-RqN"/>
@@ -646,7 +646,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SugReceipeCell" rowHeight="127" id="yiA-Aj-y7E" customClass="SugReceipeCustomCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SugRecipeCell" rowHeight="127" id="yiA-Aj-y7E" customClass="SugRecipeCustomCell">
                                         <rect key="frame" x="0.0" y="92" width="600" height="127"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yiA-Aj-y7E" id="GFc-aa-Pzh">
@@ -718,11 +718,11 @@
             </objects>
             <point key="canvasLocation" x="56" y="308"/>
         </scene>
-        <!--Item-->
+        <!--All Recipes-->
         <scene sceneID="qZR-I4-Wfv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aad-QX-FzQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4Gs-KO-is7"/>
+                    <tabBarItem key="tabBarItem" title="All Recipes" id="4Gs-KO-is7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JL3-mS-aNh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -737,11 +737,11 @@
             </objects>
             <point key="canvasLocation" x="1556" y="-487"/>
         </scene>
-        <!--Item-->
+        <!--Add-->
         <scene sceneID="rr4-6S-ajQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BAD-XD-rrk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="anr-Yz-Nls"/>
+                    <tabBarItem key="tabBarItem" title="Add" id="anr-Yz-Nls"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PiI-jC-Imx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -756,11 +756,11 @@
             </objects>
             <point key="canvasLocation" x="56" y="1537"/>
         </scene>
-        <!--Item-->
+        <!--Recommended-->
         <scene sceneID="C16-Bv-7pL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cnQ-iv-9Ph" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cXl-hX-rw7"/>
+                    <tabBarItem key="tabBarItem" title="Recommended" id="cXl-hX-rw7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vnd-tw-lTy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -777,6 +777,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cgI-gg-kbm"/>
+        <segue reference="uqj-nu-cBC"/>
     </inferredMetricsTieBreakers>
 </document>

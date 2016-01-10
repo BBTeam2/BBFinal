@@ -1,5 +1,5 @@
 //
-//  SugReceipeCustomCell.h
+//  SugRecipeCustomCell.h
 //  CookingAppDgn
 //
 //  Created by MAC1 on 1/9/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SugReceipeCustomCell : UITableViewCell
+@interface SugRecipeCustomCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *cellImageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descripLabel;

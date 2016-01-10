@@ -1,15 +1,14 @@
 //
-//  SugReceipeCustomCell.m
+//  SugRecipeCustomCell.m
 //  CookingAppDgn
 //
 //  Created by MAC1 on 1/9/16.
 //  Copyright © 2016 unlimited. All rights reserved.
 //
 
-#import "SugReceipeCustomCell.h"
+#import "SugRecipeCustomCell.h"
 
-@implementation SugReceipeCustomCell
-
+@implementation SugRecipeCustomCell
 - (void)awakeFromNib {
     // Initialization code
 }
