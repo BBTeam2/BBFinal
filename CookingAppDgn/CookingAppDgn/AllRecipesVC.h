@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllRecipesVC : UIViewController
+@interface AllRecipesVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+//properties
 @property (strong, nonatomic) IBOutlet UITableView *allReceipeTableView;
+@property (strong, nonatomic) NSMutableArray* arrAllRecipe;
 
+//methods
+-(void)LoadRecipeArray;
 
 @end
 

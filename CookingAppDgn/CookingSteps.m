@@ -15,7 +15,7 @@
     self = [super init];
     self.strDescription = description;
     self.intTimerLength = timerLength;
-    
+    self.isComplete     = NO;
     return self;
 }
 @end

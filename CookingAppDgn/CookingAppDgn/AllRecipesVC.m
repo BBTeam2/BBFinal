@@ -7,7 +7,9 @@
 //
 
 #import "AllRecipesVC.h"
-
+#import "RecipeDisplayCell.h"
+#import "Recipes.h"
+#import "CurrentSelectedVC.h"
 @interface AllRecipesVC ()
 
 @end
@@ -17,11 +19,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //setup the AllrecipeArray
+    self.arrAllRecipe = [[NSMutableArray alloc]init];
+    //load the array
+    [self LoadRecipeArray];
+    //load the tableview
+    [self.allReceipeTableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark Loading Functions
+//Load all of our recipes
+-(void)LoadRecipeArray
+{
+    
+}
+
+#pragma mark TableView Functions
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RecipeDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AllRecipeCell"];
+    
+    cell.cellImageView.image = [self.arrAllRecipe[indexPath.row] uiImage];
+    cell.titleLabel.text = [self.arrAllRecipe[indexPath.row] strTitle];
+    cell.descripLabel.text = [self.arrAllRecipe[indexPath.row] strDescription];
+    // the tag will be our identifier when a button is pressed (so we can segue
+    // to the correct part of the array
+    cell.ViewButton.tag = indexPath.row;
+    [cell.ViewButton addTarget:self action:@selector(prepareForSegue:sender:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.arrAllRecipe.count;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //this is the specific Recipe we are passing to the next view
+    
+    if ([[segue identifier] isEqualToString:@"Tab1ToCurrent"]) {
+        NSInteger index = [(UIButton*)sender tag];
+        Recipes* CurrentRecipe = self.arrAllRecipe[index];
+        CurrentSelectedVC *destinationVC =  segue.destinationViewController;
+        destinationVC.currentRecipe = CurrentRecipe;
+        
+    }
+
 }
 
 @end

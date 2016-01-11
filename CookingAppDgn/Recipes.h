@@ -19,6 +19,8 @@
 @property                    NSInteger intServingSize;
 @property                    NSInteger intTotalCookTime;
 
+
+
 //methods
 -(instancetype)initDefaults;
 -(void)CalculateTotalCookTime;

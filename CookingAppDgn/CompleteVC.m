@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //set the uiimage to the one we will see viable
+    self.imageView.image = self.someImage;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,11 +37,36 @@
 */
 
 - (IBAction)postFacebook:(UIButton *)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        slCVC = [[SLComposeViewController alloc]init];
+        slCVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        NSString *nameString = self.someName;
+        [slCVC setInitialText:[ NSString stringWithFormat:@"I have just created %@ using My Inner Chef", nameString]];
+        [self presentViewController:slCVC animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"Facebook type is not available" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [av show];
+    }
 }
 
 - (IBAction)postTwitter:(UIButton *)sender {
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        slCVC = [[SLComposeViewController alloc]init];
+        slCVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        NSString *nameString = self.someName;
+        [slCVC setInitialText:[ NSString stringWithFormat:@"I have just created %@ using My Inner Chef", nameString]];
+        [self presentViewController:slCVC animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Warning" message:@"Twitter type is not available" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [av show];
+    }
 }
 
 - (IBAction)NoThanksPress:(UIButton *)sender {
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SuggestedRecipeVC : UIViewController
+@interface SuggestedRecipeVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+//properties
 @property (strong, nonatomic) IBOutlet UITableView *suggestedReceipeTableView;
+@property (strong, nonatomic) NSMutableArray* arrSuggestRecipe;
+@property NSInteger intCurrentTemp;
 
+//methods
+-(void)LoadRecipeArray;
 @end

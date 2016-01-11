@@ -12,6 +12,7 @@
 //properties
 @property(strong,nonatomic) NSMutableString* strDescription;
 @property                   NSInteger intTimerLength;
+@property                   BOOL isComplete;
 
 //methods
 -(instancetype)initWithDescription:(NSMutableString*)description withTimeAmount:(NSInteger)timerLength;

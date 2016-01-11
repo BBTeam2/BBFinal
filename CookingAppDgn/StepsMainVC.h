@@ -7,14 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recipes.h"
 
-@interface StepsMainVC : UIViewController
+@interface StepsMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+//properties
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIProgressView *totalProgressView;
 @property (strong, nonatomic) IBOutlet UITableView *allStepsTableView;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *pausePlayButton;
+@property (strong, nonatomic) id stepRecipe;
+@property (strong, nonatomic) Recipes *myStepsRecipe;
+@property BOOL isPausePlay;
+@property float currentProgress;
+@property BOOL isRecipeComplete;
 
-- (IBAction)pausePlayPress:(UIBarButtonItem *)sender;
+//methods
+-(void)initializeUI;
+-(void)CheckIfRecipeIsComplete;
+- (IBAction)PausePress:(UIBarButtonItem *)sender;
 - (IBAction)skipPress:(UIBarButtonItem *)sender;
 - (IBAction)cancelPress:(UIBarButtonItem *)sender;
+- (IBAction)PlayPress:(UIBarButtonItem *)sender;
 @end

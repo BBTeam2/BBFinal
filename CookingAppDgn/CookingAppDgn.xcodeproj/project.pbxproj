@@ -13,6 +13,7 @@
 		81E55B121C3B079D00AF431B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B101C3B079D00AF431B /* Main.storyboard */; };
 		81E55B141C3B079D00AF431B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B131C3B079D00AF431B /* Assets.xcassets */; };
 		81E55B171C3B079D00AF431B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B151C3B079D00AF431B /* LaunchScreen.storyboard */; };
+		B8620F291C43486E00A40FE4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8620F281C43486E00A40FE4 /* Social.framework */; };
 		B8717C641C41AE3100CDA285 /* SuggestedRecipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C631C41AE3100CDA285 /* SuggestedRecipeVC.m */; };
 		B8717C691C41AF1600CDA285 /* CurrentSelectedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C681C41AF1600CDA285 /* CurrentSelectedVC.m */; };
 		B8717C6C1C41B00100CDA285 /* StepsMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C6B1C41B00100CDA285 /* StepsMainVC.m */; };
@@ -40,6 +41,7 @@
 		81E55B131C3B079D00AF431B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81E55B161C3B079D00AF431B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E55B181C3B079D00AF431B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8620F281C43486E00A40FE4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B8717C621C41AE3100CDA285 /* SuggestedRecipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestedRecipeVC.h; sourceTree = "<group>"; };
 		B8717C631C41AE3100CDA285 /* SuggestedRecipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestedRecipeVC.m; sourceTree = "<group>"; };
 		B8717C671C41AF1600CDA285 /* CurrentSelectedVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSelectedVC.h; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8620F291C43486E00A40FE4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +87,7 @@
 		81E55AFB1C3B079C00AF431B = {
 			isa = PBXGroup;
 			children = (
+				B8620F281C43486E00A40FE4 /* Social.framework */,
 				B8717C661C41AEBF00CDA285 /* ViewControllers */,
 				B8717C8C1C41F0CE00CDA285 /* Classes */,
 				81E55B061C3B079C00AF431B /* CookingAppDgn */,

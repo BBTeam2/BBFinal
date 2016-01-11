@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Social/Social.h>
 @interface CompleteVC : UIViewController
+{SLComposeViewController *slCVC;}
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) id someImage;
+@property (strong, nonatomic) id someName;
 
 - (IBAction)postFacebook:(UIButton *)sender;
 - (IBAction)postTwitter:(UIButton *)sender;
