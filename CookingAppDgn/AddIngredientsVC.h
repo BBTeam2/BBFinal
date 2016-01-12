@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AddIngredientsVC : UIViewController
+@class Recipes;
+@interface AddIngredientsVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+//properties
 @property (strong, nonatomic) IBOutlet UITextField *IngredientTextField;
 @property (strong, nonatomic) IBOutlet UITextField *amountTextField;
 @property (strong, nonatomic) IBOutlet UITableView *ingredientsTableView;
+@property (strong, nonatomic) id someRecipe;
+@property (strong, nonatomic) Recipes *currentNewRecipe;
+
+//Methods
+-(NSString*)AddIngredientName;
+
+-(NSInteger)AddIngredientAmount;
+
+-(void)ClearTextFields;
 
 - (IBAction)AddPress:(UIButton *)sender;
 - (IBAction)RemovePress:(UIButton *)sender;

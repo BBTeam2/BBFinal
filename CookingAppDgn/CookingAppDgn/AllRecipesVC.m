@@ -19,11 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
     //setup the AllrecipeArray
-    self.arrAllRecipe = [[NSMutableArray alloc]init];
+    self.arrAllRecipe = recipeSingleton.AllMyRecipeTab;
     //load the array
     [self LoadRecipeArray];
     //load the tableview
+    [self.allReceipeTableView reloadData];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    //make sure the array is accurate
+    self.arrAllRecipe = recipeSingleton.AllMyRecipeTab;
     [self.allReceipeTableView reloadData];
 }
 
@@ -50,7 +58,7 @@
     // the tag will be our identifier when a button is pressed (so we can segue
     // to the correct part of the array
     cell.ViewButton.tag = indexPath.row;
-    [cell.ViewButton addTarget:self action:@selector(prepareForSegue:sender:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.ViewButton addTarget:self action:@selector(LetsPush:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -58,6 +66,11 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.arrAllRecipe.count;
+}
+
+-(void)LetsPush:(UIButton*)sender
+{
+    [self performSegueWithIdentifier:@"Tab1ToCurrent" sender:sender];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

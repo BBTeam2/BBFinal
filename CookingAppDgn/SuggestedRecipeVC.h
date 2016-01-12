@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AllRecipeSingleton.h"
 @interface SuggestedRecipeVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
 //properties
 @property (strong, nonatomic) IBOutlet UITableView *suggestedReceipeTableView;
 @property (strong, nonatomic) NSMutableArray* arrSuggestRecipe;

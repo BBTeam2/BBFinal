@@ -7,7 +7,8 @@
 //
 
 #import "SetupStepVC.h"
-
+#import "AddStepsVC.h"
+#import "Recipes.h"
 @interface SetupStepVC ()
 
 @end
@@ -35,5 +36,17 @@
 */
 
 - (IBAction)DonePress:(UIBarButtonItem *)sender {
+    AddStepsVC *previousVC = self.someVC;
+    NSTimeInterval countdown = self.stepDatePicker.countDownDuration;
+    NSInteger minutes = floor(countdown/60);
+    
+    CookingSteps *newStep = [[CookingSteps alloc]initWithDescription:(NSMutableString*)self.instructionTextView.text withTimeAmount:minutes];
+    
+    [previousVC.stepsRecipe.arrSteps addObject:newStep];
+    
+    //load the table view
+    [previousVC.currentStepsTableView reloadData];
+    //Pop the navigation controller stack
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

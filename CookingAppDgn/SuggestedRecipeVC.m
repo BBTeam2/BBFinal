@@ -20,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-        self.arrSuggestRecipe = [[NSMutableArray alloc]init];
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
+    self.arrSuggestRecipe = [[NSMutableArray alloc]init];
     [self LoadRecipeArray];
     [self.suggestedReceipeTableView reloadData];
 }
@@ -40,6 +42,9 @@
 //temperature
 -(void)ArrangeByTemperature
 {
+    //grab the temperature
+    //set a string to a category based on the temperature
+    //loop thru array and set the current recipe to the new array we will be using.
     
 }
 

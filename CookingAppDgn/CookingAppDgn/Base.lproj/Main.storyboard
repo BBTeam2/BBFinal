@@ -41,9 +41,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODS-rV-WZj">
                                                     <rect key="frame" x="512" y="23" width="80" height="80"/>
                                                     <state key="normal" title="View"/>
-                                                    <connections>
-                                                        <segue destination="Ktr-fe-e9p" kind="push" identifier="Tab1ToCurrent" id="cgI-gg-kbm"/>
-                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crx-n2-FyZ">
                                                     <rect key="frame" x="136" y="37" width="341" height="81"/>
@@ -71,6 +68,7 @@
                     <navigationItem key="navigationItem" title="All Recipes" id="iwC-1v-iQZ"/>
                     <connections>
                         <outlet property="allReceipeTableView" destination="acm-UW-D8c" id="Pu2-8k-zUa"/>
+                        <segue destination="Ktr-fe-e9p" kind="push" identifier="Tab1ToCurrent" id="agn-dj-r96"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -402,7 +400,7 @@
                     <navigationItem key="navigationItem" title="New Recipe" id="tIF-AE-iEN">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="yOC-sC-okJ">
                             <connections>
-                                <segue destination="0lF-bV-fyz" kind="push" id="j67-xq-6Z2"/>
+                                <segue destination="0lF-bV-fyz" kind="push" identifier="Phase1Complete" id="j67-xq-6Z2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -494,6 +492,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0lF-bV-fyz" id="lyv-Yx-F2x"/>
+                                    <outlet property="delegate" destination="0lF-bV-fyz" id="ipa-sj-OH2"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -501,7 +503,7 @@
                     <navigationItem key="navigationItem" title="Ingredients" id="W92-ZY-wTn">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="OVX-rl-nWw">
                             <connections>
-                                <segue destination="Wgx-Uc-uQS" kind="push" id="U8a-7a-oEq"/>
+                                <segue destination="Wgx-Uc-uQS" kind="push" identifier="Phase2Complete" id="U8a-7a-oEq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -556,6 +558,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wgx-Uc-uQS" id="8MH-WV-VWN"/>
+                                    <outlet property="delegate" destination="Wgx-Uc-uQS" id="4Bl-AP-rLr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -569,7 +575,7 @@
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="7eE-zk-J9O">
                                 <connections>
-                                    <segue destination="Ohk-nV-0gQ" kind="push" id="1Ko-P7-gRt"/>
+                                    <segue destination="Ohk-nV-0gQ" kind="push" identifier="CreateSetupInstruction" id="1Ko-P7-gRt"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -678,9 +684,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8b-BU-uoa">
                                                     <rect key="frame" x="512" y="23" width="80" height="80"/>
                                                     <state key="normal" title="View"/>
-                                                    <connections>
-                                                        <segue destination="Ktr-fe-e9p" kind="push" identifier="Tab3ToCurrent" id="uqj-nu-cBC"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -703,6 +706,7 @@
                     <navigationItem key="navigationItem" title="Suggestions" id="EUu-bD-WqD"/>
                     <connections>
                         <outlet property="suggestedReceipeTableView" destination="82k-hU-KJN" id="BbL-5j-U1o"/>
+                        <segue destination="Ktr-fe-e9p" kind="push" identifier="Tab3ToCurrent" id="oK0-lb-on8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leg-qZ-EjK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -788,6 +792,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uqj-nu-cBC"/>
+        <segue reference="agn-dj-r96"/>
     </inferredMetricsTieBreakers>
 </document>

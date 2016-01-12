@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AddStepsVC : UIViewController
+#import "AllRecipeSingleton.h"
+@class Recipes;
+@interface AddStepsVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
+//properties
 @property (strong, nonatomic) IBOutlet UITableView *currentStepsTableView;
+@property (strong, nonatomic) id stepsSomeRecipe;
+@property (strong, nonatomic) Recipes *stepsRecipe;
+//methods
 
 - (IBAction)DonePress:(UIBarButtonItem *)sender;
 @end

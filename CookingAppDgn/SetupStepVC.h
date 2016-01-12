@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CookingSteps.h"
 
 @interface SetupStepVC : UIViewController
+//properties
 @property (strong, nonatomic) IBOutlet UITextView *instructionTextView;
 @property (strong, nonatomic) IBOutlet UIDatePicker *stepDatePicker;
+@property (strong, nonatomic) id someVC;
 - (IBAction)DonePress:(UIBarButtonItem *)sender;
 
 @end
