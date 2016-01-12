@@ -32,10 +32,10 @@
     //check if steps are valid
     if ([self.arrSteps count] > 0)
     {
-        return;
+        for (int i = 0; i < self.arrSteps.count; i++) {
+            self.intTotalCookTime += [self.arrSteps[i] intTimerLength];
+        }
     }
-    for (int i = 0; i < self.arrSteps.count; i++) {
-        self.intTotalCookTime += [self.arrSteps[i] intTimerLength];
-    }
+
 }
 @end

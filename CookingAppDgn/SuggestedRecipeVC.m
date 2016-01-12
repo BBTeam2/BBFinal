@@ -25,6 +25,9 @@
     self.arrSuggestRecipe = [[NSMutableArray alloc]init];
     [self LoadRecipeArray];
     [self.suggestedReceipeTableView reloadData];
+    //have singleton hold the information for the 3rdTab Navigation Controller
+    recipeSingleton.ThirdTabNavController = self.navigationController;
+    
 }
 
 - (void)didReceiveMemoryWarning {

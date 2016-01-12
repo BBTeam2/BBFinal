@@ -24,6 +24,8 @@
 {
     if (self = [super init]) {
         self.AllMyRecipeTab = [[NSMutableArray alloc]init];
+        self.FirstTabNavController = nil;
+        self.ThirdTabNavController = nil;
     }
     return self;
 }

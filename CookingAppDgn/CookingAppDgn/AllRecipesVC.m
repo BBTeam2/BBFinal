@@ -23,6 +23,8 @@
     recipeSingleton = [AllRecipeSingleton objectManager];
     //setup the AllrecipeArray
     self.arrAllRecipe = recipeSingleton.AllMyRecipeTab;
+    //set the singletonID to hold this tabs navigation controller;
+    recipeSingleton.FirstTabNavController = self.navigationController;
     //load the array
     [self LoadRecipeArray];
     //load the tableview

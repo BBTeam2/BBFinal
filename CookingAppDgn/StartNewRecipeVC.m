@@ -24,6 +24,7 @@ NSCharacterSet *NumericSet;
     AlphaNumericSet = [NSCharacterSet alphanumericCharacterSet];
     NumericSet = [NSCharacterSet decimalDigitCharacterSet];
     [self.categorySegmentCntrl setSelectedSegmentIndex:-1];
+    
 }
 -(void)viewDidAppear:(BOOL)animated
 {

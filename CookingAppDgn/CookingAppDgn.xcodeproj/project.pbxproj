@@ -14,6 +14,7 @@
 		81E55B141C3B079D00AF431B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B131C3B079D00AF431B /* Assets.xcassets */; };
 		81E55B171C3B079D00AF431B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B151C3B079D00AF431B /* LaunchScreen.storyboard */; };
 		B82D47951C44764400D6EA85 /* AllRecipeSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = B82D47941C44764400D6EA85 /* AllRecipeSingleton.m */; };
+		B82D47BE1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B82D47BC1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld */; };
 		B8620F291C43486E00A40FE4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8620F281C43486E00A40FE4 /* Social.framework */; };
 		B8717C641C41AE3100CDA285 /* SuggestedRecipeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C631C41AE3100CDA285 /* SuggestedRecipeVC.m */; };
 		B8717C691C41AF1600CDA285 /* CurrentSelectedVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C681C41AF1600CDA285 /* CurrentSelectedVC.m */; };
@@ -44,6 +45,7 @@
 		81E55B181C3B079D00AF431B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B82D47931C44764400D6EA85 /* AllRecipeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllRecipeSingleton.h; sourceTree = "<group>"; };
 		B82D47941C44764400D6EA85 /* AllRecipeSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllRecipeSingleton.m; sourceTree = "<group>"; };
+		B82D47BD1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CookingAppDgn.xcdatamodel; sourceTree = "<group>"; };
 		B8620F281C43486E00A40FE4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B8717C621C41AE3100CDA285 /* SuggestedRecipeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestedRecipeVC.h; sourceTree = "<group>"; };
 		B8717C631C41AE3100CDA285 /* SuggestedRecipeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestedRecipeVC.m; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				81E55B131C3B079D00AF431B /* Assets.xcassets */,
 				81E55B151C3B079D00AF431B /* LaunchScreen.storyboard */,
 				81E55B181C3B079D00AF431B /* Info.plist */,
+				B82D47BC1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld */,
 				81E55B071C3B079D00AF431B /* Supporting Files */,
 			);
 			path = CookingAppDgn;
@@ -316,6 +319,7 @@
 				B82D47951C44764400D6EA85 /* AllRecipeSingleton.m in Sources */,
 				B8717C6F1C41B11F00CDA285 /* CompleteVC.m in Sources */,
 				81E55B091C3B079D00AF431B /* main.m in Sources */,
+				B82D47BE1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld in Sources */,
 				B8717C6C1C41B00100CDA285 /* StepsMainVC.m in Sources */,
 				B8717C8B1C41CCF600CDA285 /* StepTableViewCell.m in Sources */,
 			);
@@ -469,6 +473,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B82D47BC1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B82D47BD1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodel */,
+			);
+			currentVersion = B82D47BD1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodel */;
+			path = CookingAppDgn.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 81E55AFC1C3B079C00AF431B /* Project object */;
 }

@@ -69,14 +69,6 @@
 
 - (IBAction)DonePress:(UIBarButtonItem *)sender {
     
-    //access the first tabs view controller
-    AllRecipesVC *allRecipeVC = [self.tabBarController.childViewControllers objectAtIndex:0];
-    
-    //mack sure we are where we say we are
-    AllRecipesVC *firstTabVC = [allRecipeVC.navigationController.childViewControllers objectAtIndex:0];
-    
-
-    
     //calculate the totaltime of cooking
     [self.stepsRecipe CalculateTotalCookTime];
     //we add our whole recipe

@@ -11,6 +11,9 @@
 @interface AllRecipeSingleton : NSObject
 @property (retain,nonatomic) NSMutableArray *AllMyRecipeTab;
 
+@property (retain,nonatomic) id FirstTabNavController;
+@property (retain,nonatomic) id ThirdTabNavController;
+
 +(id)objectManager;
 
 @end
