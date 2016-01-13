@@ -25,6 +25,12 @@
     //load the tableView
     [self.allStepsTableView reloadData];
     
+    //set the current active step(default value)
+    self.currentActiveStep = 0;
+    //this will hold how many seconds initially
+    self.currenActiveTimer = [self.myStepsRecipe.arrSteps[self.currentActiveStep] intTimerLength]*60;
+    //now we can start our timer
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(CountDown) userInfo:nil repeats:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +44,24 @@
     self.totalProgressView.progress = 0.0f;
     self.currentProgress = 0.0f;
     self.isPausePlay = YES;
+    
+}
+#pragma mark NSTimer functions
+-(void)StartTimer
+{
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(CountDown) userInfo:nil repeats:YES];
+}
+-(void)CountDown
+{
+    self.currenActiveTimer -=1;
+    if (self.currenActiveTimer == 0) {
+        [self.myStepsRecipe.arrSteps[self.currentActiveStep] setIsComplete:YES];
+        self.CompleteTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(CheckIfRecipeIsComplete) userInfo:nil repeats:NO];
+        [self.timer invalidate];
+        
+    }
+    //reload the tableview
+    [self.allStepsTableView reloadData];
 }
 
 #pragma mark TableView Function
@@ -47,16 +71,27 @@
     
     cell.InstructionLabel.text = [self.myStepsRecipe.arrSteps[indexPath.row] strDescription];
     //**This will need to be updated for tableView when we add an nsTimer
-    
+    //This will set all the labels once they are done
     if ([self.myStepsRecipe.arrSteps[indexPath.row] isComplete] ) {
         cell.timerLabel.text = [NSString stringWithFormat:@"Complete"];
     }
     else
     {
-        cell.timerLabel.text = [NSString stringWithFormat:@"%ld",(long)[self.myStepsRecipe.arrSteps[indexPath.row] intTimerLength]];
+        if (indexPath.row == self.currentActiveStep) {
+            NSInteger seconds = self.currenActiveTimer % 60;
+            NSInteger minutes = (self.currenActiveTimer / 60) % 60;
+            NSInteger hours = (self.currenActiveTimer / 3600);
+            cell.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld:%ld",hours,minutes,seconds];
+        }
+        else
+        {
+            NSInteger tempTimer = (long)[self.myStepsRecipe.arrSteps[indexPath.row] intTimerLength];
+            NSInteger minutes = (tempTimer / 60) % 60;
+            NSInteger hours = (tempTimer / 3600);
+            cell.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld",hours,minutes];
+        }
     }
-    //check if the Recipe is Done
-    [self CheckIfRecipeIsComplete];
+
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -71,8 +106,12 @@
         self.isRecipeComplete = [self.myStepsRecipe.arrSteps[i] isComplete];
     }
     if (self.isRecipeComplete == YES) {
-        CompleteVC *completeVC = [[CompleteVC alloc]init];
-        [self.navigationController pushViewController:completeVC animated:YES];
+        [self performSegueWithIdentifier:@"FinalTab" sender:self];
+        
+    }
+    else
+    {
+        [self.allStepsTableView reloadData];
     }
 }
 
@@ -82,41 +121,78 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Pass the selected object to the new view controller.
-    CompleteVC *destinationVC = segue.destinationViewController;
-    destinationVC.someImage = [self.myStepsRecipe uiImage];
-    destinationVC.someName = self.myStepsRecipe.strTitle;
-    
+    if ([[segue identifier]isEqualToString:@"FinalTab"]) {
+        CompleteVC *destinationVC = segue.destinationViewController;
+        destinationVC.someImage = [self.myStepsRecipe uiImage];
+        destinationVC.someName = self.myStepsRecipe.strTitle;
+        
+    }
+
 }
+
+#pragma mark -Button Press
 
 
 - (IBAction)PausePress:(UIBarButtonItem *)sender {
     //The Pause button has been pressed
     if (self.isPausePlay) {
-        self.pausePlayButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(PlayPress:)];
-        //self.navigationItem.rightBarButtonItem = self.pausePlayButton;
+        UIBarButtonItem *play = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(PlayPress:)];
+        
+        NSMutableArray *newNavBar = [self.navigationItem.rightBarButtonItems mutableCopy];
+        [newNavBar replaceObjectAtIndex:2 withObject:play];
+        
+        self.navigationItem.rightBarButtonItems = newNavBar;
         self.isPausePlay= NO;
+        //stop the timer
+        [self.timer invalidate];
+        //reload the tableview
+        [self.allStepsTableView reloadData];
     }
-
+    
 }
 
 - (IBAction)skipPress:(UIBarButtonItem *)sender {
     //have the current item we are going to skip
     //force the timer to end and go to the next step and begin the counter for that item
-    //
+    [self.timer invalidate];
+    [self.myStepsRecipe.arrSteps[self.currentActiveStep] setIsComplete:YES];
+    //set the current active step to the next step
+    self.currentActiveStep += 1;
+    //reset the currentTimer to new value(dont forget to set it to seconds.
+    if ([self.myStepsRecipe.arrSteps count] > self.currentActiveStep) {
+        self.currenActiveTimer = [self.myStepsRecipe.arrSteps[self.currentActiveStep] intTimerLength]*60;
+        //start the new timer
+        [self StartTimer];
+    }
+    //There are no more steps we are done here
+    else
+    {
+        [self CheckIfRecipeIsComplete ];
+    }
+
     
 }
 
 - (IBAction)cancelPress:(UIBarButtonItem *)sender {
     //post an UIAlert that will inform the user that they will stop the entire cooking proccess without any chance of undoing this
-    
+    //reset the current active step
+    //stop the timer
+    [self.timer invalidate];
+    self.currentActiveStep = 0;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)PlayPress:(UIBarButtonItem *)sender {
     if (self.isPausePlay == NO) {
-        self.pausePlayButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(PausePress:)];
-        //self.navigationItem.rightBarButtonItem = self.pausePlayButton;
+        UIBarButtonItem *pause = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPause target:self action:@selector(PausePress:)];
+        
+        NSMutableArray *newNavBar = [self.navigationItem.rightBarButtonItems mutableCopy];
+        [newNavBar replaceObjectAtIndex:2 withObject:pause];
+        
+        self.navigationItem.rightBarButtonItems = newNavBar;
         self.isPausePlay= YES;
+        //start the timer again
+        [self StartTimer];
     }
 }
 @end

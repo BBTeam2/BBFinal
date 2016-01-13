@@ -62,7 +62,7 @@
     // the tag will be our identifier when a button is pressed (so we can segue
     // to the correct part of the array
     cell.viewButton.tag = indexPath.row;
-    [cell.viewButton addTarget:self action:@selector(prepareForSegue:sender:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.viewButton addTarget:self action:@selector(LetsPush:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -70,6 +70,13 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.arrSuggestRecipe.count;
+}
+
+-(void)LetsPush:(UIButton*)sender
+{
+    //lets check if other tab is currently in the way
+    
+    [self performSegueWithIdentifier:@"Tab3ToCurrent" sender:sender];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

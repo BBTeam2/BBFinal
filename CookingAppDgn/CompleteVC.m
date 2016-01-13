@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     //set the uiimage to the one we will see viable
     self.imageView.image = self.someImage;
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +68,7 @@
 }
 
 - (IBAction)NoThanksPress:(UIButton *)sender {
+    self.navigationController.navigationBar.hidden = NO;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 @end

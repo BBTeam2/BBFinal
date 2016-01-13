@@ -72,6 +72,8 @@
 
 -(void)LetsPush:(UIButton*)sender
 {
+    //lets check if other tab is currently in the way
+    
     [self performSegueWithIdentifier:@"Tab1ToCurrent" sender:sender];
 }
 

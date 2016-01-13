@@ -19,11 +19,17 @@
 @property (strong, nonatomic) Recipes *myStepsRecipe;
 @property BOOL isPausePlay;
 @property float currentProgress;
+@property NSInteger currentActiveStep;
+@property NSInteger currenActiveTimer;
 @property BOOL isRecipeComplete;
+@property NSTimer *timer;
+@property NSTimer *CompleteTimer;
+
 
 //methods
 -(void)initializeUI;
 -(void)CheckIfRecipeIsComplete;
+-(void)StartTimer;
 - (IBAction)PausePress:(UIBarButtonItem *)sender;
 - (IBAction)skipPress:(UIBarButtonItem *)sender;
 - (IBAction)cancelPress:(UIBarButtonItem *)sender;
