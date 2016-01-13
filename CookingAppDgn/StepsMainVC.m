@@ -85,7 +85,7 @@
         }
         else
         {
-            NSInteger tempTimer = (long)[self.myStepsRecipe.arrSteps[indexPath.row] intTimerLength];
+            NSInteger tempTimer = (long)[self.myStepsRecipe.arrSteps[indexPath.row] intTimerLength]*60;
             NSInteger minutes = (tempTimer / 60) % 60;
             NSInteger hours = (tempTimer / 3600);
             cell.timerLabel.text = [NSString stringWithFormat:@"%ld:%ld",hours,minutes];
