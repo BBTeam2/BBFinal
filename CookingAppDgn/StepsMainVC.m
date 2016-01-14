@@ -108,6 +108,8 @@
         self.isRecipeComplete = [self.myStepsRecipe.arrSteps[i] isComplete];
     }
     if (self.isRecipeComplete == YES) {
+        //**add cheering sound effect here.  Create a new method in CookingSounds.m first.
+        //[recipeSingleton.cookingSound playSound4];
         [self performSegueWithIdentifier:@"FinalTab" sender:self];
         
     }
@@ -166,11 +168,13 @@
     if ([self.myStepsRecipe.arrSteps count] > self.currentActiveStep) {
         self.currenActiveTimer = [self.myStepsRecipe.arrSteps[self.currentActiveStep] intTimerLength]*60;
         //start the new timer
+        [recipeSingleton.cookingSound playSound4];
         [self StartTimer];
     }
     //There are no more steps we are done here
     else
     {
+        [recipeSingleton.cookingSound playSound5];
         [self CheckIfRecipeIsComplete ];
     }
 
@@ -187,7 +191,7 @@
         [self.myStepsRecipe.arrSteps[i] setIsComplete:NO ];
     }
     //play some sweet sounds
-    [recipeSingleton.cookingSound playSound];
+    [recipeSingleton.cookingSound playSound4];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

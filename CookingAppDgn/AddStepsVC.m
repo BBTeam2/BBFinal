@@ -88,7 +88,7 @@
     
     
     //play some sweet sounds
-    [recipeSingleton.cookingSound playSound];
+    [recipeSingleton.cookingSound playSound2];
     
     //once everything is saved pop to the RootViewController
     [self.navigationController popToRootViewControllerAnimated:YES];

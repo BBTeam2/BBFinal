@@ -12,5 +12,9 @@
 @interface CookingSounds : NSObject
 
 -(void)playSound;
+-(void)playSound2;
+-(void)playSound3;
+-(void)playSound4;
+-(void)playSound5;
 
 @end

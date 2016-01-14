@@ -76,7 +76,7 @@
         StepsMainVC *stepVC = [segue destinationViewController];
         stepVC.stepRecipe = self.myRecipe;
         //play some sweet sounds
-        [recipeSingleton.cookingSound playSound];
+        [recipeSingleton.cookingSound playSound2];
     }
 
 }
