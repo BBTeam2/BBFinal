@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		814E53381C480B4500E00776 /* fingerClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 814E53371C480B4500E00776 /* fingerClick.mp3 */; };
-		814E533A1C480B5200E00776 /* whipWosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 814E53391C480B5200E00776 /* whipWosh.mp3 */; };
 		81E55B091C3B079D00AF431B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B081C3B079D00AF431B /* main.m */; };
 		81E55B0C1C3B079D00AF431B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B0B1C3B079D00AF431B /* AppDelegate.m */; };
 		81E55B0F1C3B079D00AF431B /* AllRecipesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E55B0E1C3B079D00AF431B /* AllRecipesVC.m */; };
 		81E55B121C3B079D00AF431B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B101C3B079D00AF431B /* Main.storyboard */; };
 		81E55B141C3B079D00AF431B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B131C3B079D00AF431B /* Assets.xcassets */; };
 		81E55B171C3B079D00AF431B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E55B151C3B079D00AF431B /* LaunchScreen.storyboard */; };
-		81FA0DE31C48207200D89E77 /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 81FA0DE21C48207200D89E77 /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 */; };
 		B82D47951C44764400D6EA85 /* AllRecipeSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = B82D47941C44764400D6EA85 /* AllRecipeSingleton.m */; };
 		B82D47BE1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B82D47BC1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld */; };
 		B8620F291C43486E00A40FE4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8620F281C43486E00A40FE4 /* Social.framework */; };
@@ -37,11 +34,12 @@
 		B8797F381C47F9FC007F331A /* CookingSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = B8797F371C47F9FC007F331A /* CookingSounds.m */; };
 		B8797F3A1C47FA14007F331A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8797F391C47FA14007F331A /* AudioToolbox.framework */; };
 		B8797F3C1C47FE22007F331A /* swords.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8797F3B1C47FE22007F331A /* swords.mp3 */; };
+		B8797F4A1C482570007F331A /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8797F471C482570007F331A /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 */; };
+		B8797F4B1C482570007F331A /* fingerClick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8797F481C482570007F331A /* fingerClick.mp3 */; };
+		B8797F4C1C482570007F331A /* whipWosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8797F491C482570007F331A /* whipWosh.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		814E53371C480B4500E00776 /* fingerClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = fingerClick.mp3; path = ../../../SoundEffects/fingerClick.mp3; sourceTree = "<group>"; };
-		814E53391C480B5200E00776 /* whipWosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = whipWosh.mp3; path = ../../../SoundEffects/whipWosh.mp3; sourceTree = "<group>"; };
 		81E55B041C3B079C00AF431B /* CookingAppDgn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingAppDgn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E55B081C3B079D00AF431B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81E55B0A1C3B079D00AF431B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,7 +50,6 @@
 		81E55B131C3B079D00AF431B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81E55B161C3B079D00AF431B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E55B181C3B079D00AF431B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81FA0DE21C48207200D89E77 /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "5_Sec_Crowd_Cheer-Mike_Koenig.mp3"; path = "../../../SoundEffects/5_Sec_Crowd_Cheer-Mike_Koenig.mp3"; sourceTree = "<group>"; };
 		B82D47931C44764400D6EA85 /* AllRecipeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllRecipeSingleton.h; sourceTree = "<group>"; };
 		B82D47941C44764400D6EA85 /* AllRecipeSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllRecipeSingleton.m; sourceTree = "<group>"; };
 		B82D47BD1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CookingAppDgn.xcdatamodel; sourceTree = "<group>"; };
@@ -90,6 +87,9 @@
 		B8797F371C47F9FC007F331A /* CookingSounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingSounds.m; sourceTree = "<group>"; };
 		B8797F391C47FA14007F331A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B8797F3B1C47FE22007F331A /* swords.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swords.mp3; sourceTree = SOURCE_ROOT; };
+		B8797F471C482570007F331A /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "5_Sec_Crowd_Cheer-Mike_Koenig.mp3"; sourceTree = SOURCE_ROOT; };
+		B8797F481C482570007F331A /* fingerClick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fingerClick.mp3; sourceTree = SOURCE_ROOT; };
+		B8797F491C482570007F331A /* whipWosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whipWosh.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +143,10 @@
 		81E55B071C3B079D00AF431B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8797F471C482570007F331A /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 */,
+				B8797F481C482570007F331A /* fingerClick.mp3 */,
+				B8797F491C482570007F331A /* whipWosh.mp3 */,
 				B8797F3B1C47FE22007F331A /* swords.mp3 */,
-				814E53371C480B4500E00776 /* fingerClick.mp3 */,
-				81FA0DE21C48207200D89E77 /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 */,
-				814E53391C480B5200E00776 /* whipWosh.mp3 */,
 				81E55B0A1C3B079D00AF431B /* AppDelegate.h */,
 				81E55B0B1C3B079D00AF431B /* AppDelegate.m */,
 				81E55B081C3B079D00AF431B /* main.m */,
@@ -316,13 +316,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814E53381C480B4500E00776 /* fingerClick.mp3 in Resources */,
 				81E55B171C3B079D00AF431B /* LaunchScreen.storyboard in Resources */,
 				81E55B141C3B079D00AF431B /* Assets.xcassets in Resources */,
-				814E533A1C480B5200E00776 /* whipWosh.mp3 in Resources */,
-				81FA0DE31C48207200D89E77 /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 in Resources */,
 				B8797F3C1C47FE22007F331A /* swords.mp3 in Resources */,
 				81E55B121C3B079D00AF431B /* Main.storyboard in Resources */,
+				B8797F4B1C482570007F331A /* fingerClick.mp3 in Resources */,
+				B8797F4A1C482570007F331A /* 5_Sec_Crowd_Cheer-Mike_Koenig.mp3 in Resources */,
+				B8797F4C1C482570007F331A /* whipWosh.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
