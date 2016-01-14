@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class Recipes;
-@interface StartNewRecipeVC : UIViewController
+@interface StartNewRecipeVC : UIViewController<UITextFieldDelegate,UITextViewDelegate>
 //properties
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;

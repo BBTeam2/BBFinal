@@ -25,6 +25,8 @@
     
     //load the tableview
     [self.ingredientTableView reloadData];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

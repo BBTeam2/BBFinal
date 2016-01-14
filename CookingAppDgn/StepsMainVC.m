@@ -125,6 +125,7 @@
         CompleteVC *destinationVC = segue.destinationViewController;
         destinationVC.someImage = [self.myStepsRecipe uiImage];
         destinationVC.someName = self.myStepsRecipe.strTitle;
+        destinationVC.thisRecipe = self.myStepsRecipe;
         
     }
 
@@ -179,6 +180,9 @@
     //stop the timer
     [self.timer invalidate];
     self.currentActiveStep = 0;
+    for (int i = 0; i < [self.myStepsRecipe.arrSteps count]; i++) {
+        [self.myStepsRecipe.arrSteps[i] setIsComplete:NO ];
+    }
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

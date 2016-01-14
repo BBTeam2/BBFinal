@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *allReceipeTableView;
 @property (strong, nonatomic) NSMutableArray* arrAllRecipe;
 
+
 //methods
 -(void)LoadRecipeArray;
 

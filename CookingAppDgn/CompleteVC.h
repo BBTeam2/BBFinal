@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
+@class Recipes;
 @interface CompleteVC : UIViewController
 {SLComposeViewController *slCVC;}
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) id someImage;
 @property (strong, nonatomic) id someName;
-
+@property (strong, nonatomic) id thisRecipe;
+@property (strong, nonatomic) Recipes *finalRecipe;
 - (IBAction)postFacebook:(UIButton *)sender;
 - (IBAction)postTwitter:(UIButton *)sender;
 - (IBAction)NoThanksPress:(UIButton *)sender;

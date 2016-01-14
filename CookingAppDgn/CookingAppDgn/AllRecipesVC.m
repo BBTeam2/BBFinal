@@ -29,6 +29,7 @@
     [self LoadRecipeArray];
     //load the tableview
     [self.allReceipeTableView reloadData];
+    
 }
 -(void)viewDidAppear:(BOOL)animated
 {

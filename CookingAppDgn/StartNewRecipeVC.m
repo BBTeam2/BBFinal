@@ -24,6 +24,12 @@ NSCharacterSet *NumericSet;
     AlphaNumericSet = [NSCharacterSet alphanumericCharacterSet];
     NumericSet = [NSCharacterSet decimalDigitCharacterSet];
     [self.categorySegmentCntrl setSelectedSegmentIndex:-1];
+    //set the delegates
+    self.titleTextField.delegate = self;
+    self.descriptionTextView.delegate = self;
+    self.servingSizeTextField.delegate = self;
+    
+    
     
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -36,6 +42,20 @@ NSCharacterSet *NumericSet;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark TextField and TextView Protocals
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark -Assignment Functions

@@ -7,7 +7,8 @@
 //
 
 #import "CompleteVC.h"
-
+#import "Recipes.h"
+#import "CookingSteps.h"
 @interface CompleteVC ()
 
 @end
@@ -20,6 +21,7 @@
     //set the uiimage to the one we will see viable
     self.imageView.image = self.someImage;
     self.navigationController.navigationBar.hidden = YES;
+    self.finalRecipe = self.thisRecipe;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,6 +70,10 @@
 }
 
 - (IBAction)NoThanksPress:(UIButton *)sender {
+    //check all the steps and reset there complete variable
+    for (int i = 0; i < [self.finalRecipe.arrSteps count]; i++) {
+        [self.finalRecipe.arrSteps[i] setIsComplete:NO ];
+    }
     self.navigationController.navigationBar.hidden = NO;
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
