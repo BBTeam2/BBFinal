@@ -20,5 +20,18 @@
 //methods
 -(void)LoadRecipeArray;
 
+
+//hard code functions for each Recipe
+-(void)LoadRecipe1;
+-(void)LoadRecipe2;
+-(void)LoadRecipe3;
+-(void)LoadRecipe4;
+-(void)LoadRecipe5;
+-(void)LoadRecipe6;
+-(void)LoadRecipe7;
+-(void)LoadRecipe8;
+-(void)LoadRecipe9;
+-(void)LoadRecipe10;
+
 @end
 

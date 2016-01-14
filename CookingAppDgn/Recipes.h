@@ -23,6 +23,9 @@
 
 //methods
 -(instancetype)initDefaults;
+-(instancetype)initWithTitle:(NSMutableString *)name withDescription:(NSMutableString*)descript withImage:(UIImage*)image withCategory:(NSMutableString *)category withSteps:(NSMutableArray *)steps withIngredients:(NSMutableArray *)ingredients withServingSize:(NSInteger)servingSize withTotalCookTime:(NSInteger)totalCookTime;
+-(NSMutableArray*)createCookingStepsArray:(NSMutableArray *)descriptionArray withTimerArray:(NSArray*)timerArray;
+-(NSMutableArray*)createIngredientsArray:(NSMutableArray *)ingredientsArray withAmountArray:(NSMutableArray*)amounts;
 -(void)CalculateTotalCookTime;
 
 @end

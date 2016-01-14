@@ -40,6 +40,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+    self.arrSuggestRecipe = [[NSMutableArray alloc]init];
     [self LoadRecipeArray];
     [self.suggestedReceipeTableView reloadData];
 }
