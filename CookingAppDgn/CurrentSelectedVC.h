@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Recipes.h"
+#import "AllRecipeSingleton.h"
 @interface CurrentSelectedVC : UIViewController<UITableViewDelegate,UITableViewDataSource>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *descripLabel;

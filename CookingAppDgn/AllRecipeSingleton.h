@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CookingSounds.h"
 @interface AllRecipeSingleton : NSObject
 @property (retain,nonatomic) NSMutableArray *AllMyRecipeTab;
+@property (retain,nonatomic) CookingSounds* cookingSound;
 
 @property (retain,nonatomic) id FirstTabNavController;
 @property (retain,nonatomic) id ThirdTabNavController;

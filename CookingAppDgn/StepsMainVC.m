@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
     self.myStepsRecipe = self.stepRecipe;
     //initialize UI Elements
     [self initializeUI];
@@ -126,7 +128,8 @@
         destinationVC.someImage = [self.myStepsRecipe uiImage];
         destinationVC.someName = self.myStepsRecipe.strTitle;
         destinationVC.thisRecipe = self.myStepsRecipe;
-        
+        //play some sweet sounds
+        [recipeSingleton.cookingSound playSound];
     }
 
 }
@@ -183,6 +186,8 @@
     for (int i = 0; i < [self.myStepsRecipe.arrSteps count]; i++) {
         [self.myStepsRecipe.arrSteps[i] setIsComplete:NO ];
     }
+    //play some sweet sounds
+    [recipeSingleton.cookingSound playSound];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 

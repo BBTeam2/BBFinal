@@ -74,6 +74,10 @@
 -(void)LetsPush:(UIButton*)sender
 {
     //lets check if other tab is currently in the way
+    UINavigationController *otherTabNav = recipeSingleton.ThirdTabNavController;
+    if (otherTabNav != nil) {
+        [otherTabNav popToRootViewControllerAnimated:YES];
+    }
     
     [self performSegueWithIdentifier:@"Tab1ToCurrent" sender:sender];
 }
@@ -87,7 +91,8 @@
         Recipes* CurrentRecipe = self.arrAllRecipe[index];
         CurrentSelectedVC *destinationVC =  segue.destinationViewController;
         destinationVC.currentRecipe = CurrentRecipe;
-        
+        //play some sweet sounds
+        [recipeSingleton.cookingSound playSound];
     }
 
 }

@@ -30,6 +30,10 @@
 		B8717C8F1C41F10800CDA285 /* Ingredients.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C8E1C41F10800CDA285 /* Ingredients.m */; };
 		B8717C921C41FB8A00CDA285 /* CookingSteps.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C911C41FB8A00CDA285 /* CookingSteps.m */; };
 		B8717C951C41FDF300CDA285 /* Recipes.m in Sources */ = {isa = PBXBuildFile; fileRef = B8717C941C41FDF300CDA285 /* Recipes.m */; };
+		B8797F351C475E10007F331A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8797F341C475E10007F331A /* CoreLocation.framework */; };
+		B8797F381C47F9FC007F331A /* CookingSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = B8797F371C47F9FC007F331A /* CookingSounds.m */; };
+		B8797F3A1C47FA14007F331A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8797F391C47FA14007F331A /* AudioToolbox.framework */; };
+		B8797F3C1C47FE22007F331A /* swords.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8797F3B1C47FE22007F331A /* swords.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +79,11 @@
 		B8717C911C41FB8A00CDA285 /* CookingSteps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingSteps.m; sourceTree = "<group>"; };
 		B8717C931C41FDF300CDA285 /* Recipes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipes.h; sourceTree = "<group>"; };
 		B8717C941C41FDF300CDA285 /* Recipes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipes.m; sourceTree = "<group>"; };
+		B8797F341C475E10007F331A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B8797F361C47F9FC007F331A /* CookingSounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingSounds.h; sourceTree = "<group>"; };
+		B8797F371C47F9FC007F331A /* CookingSounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingSounds.m; sourceTree = "<group>"; };
+		B8797F391C47FA14007F331A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B8797F3B1C47FE22007F331A /* swords.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = swords.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8797F3A1C47FA14007F331A /* AudioToolbox.framework in Frameworks */,
+				B8797F351C475E10007F331A /* CoreLocation.framework in Frameworks */,
 				B8620F291C43486E00A40FE4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +103,8 @@
 		81E55AFB1C3B079C00AF431B = {
 			isa = PBXGroup;
 			children = (
+				B8797F391C47FA14007F331A /* AudioToolbox.framework */,
+				B8797F341C475E10007F331A /* CoreLocation.framework */,
 				B8620F281C43486E00A40FE4 /* Social.framework */,
 				B8717C661C41AEBF00CDA285 /* ViewControllers */,
 				B8717C8C1C41F0CE00CDA285 /* Classes */,
@@ -124,6 +137,7 @@
 		81E55B071C3B079D00AF431B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8797F3B1C47FE22007F331A /* swords.mp3 */,
 				81E55B0A1C3B079D00AF431B /* AppDelegate.h */,
 				81E55B0B1C3B079D00AF431B /* AppDelegate.m */,
 				81E55B081C3B079D00AF431B /* main.m */,
@@ -221,6 +235,8 @@
 		B8717C8C1C41F0CE00CDA285 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B8797F361C47F9FC007F331A /* CookingSounds.h */,
+				B8797F371C47F9FC007F331A /* CookingSounds.m */,
 				B82D47931C44764400D6EA85 /* AllRecipeSingleton.h */,
 				B82D47941C44764400D6EA85 /* AllRecipeSingleton.m */,
 				B8717C8D1C41F10800CDA285 /* Ingredients.h */,
@@ -293,6 +309,7 @@
 			files = (
 				81E55B171C3B079D00AF431B /* LaunchScreen.storyboard in Resources */,
 				81E55B141C3B079D00AF431B /* Assets.xcassets in Resources */,
+				B8797F3C1C47FE22007F331A /* swords.mp3 in Resources */,
 				81E55B121C3B079D00AF431B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +337,7 @@
 				B82D47951C44764400D6EA85 /* AllRecipeSingleton.m in Sources */,
 				B8717C6F1C41B11F00CDA285 /* CompleteVC.m in Sources */,
 				81E55B091C3B079D00AF431B /* main.m in Sources */,
+				B8797F381C47F9FC007F331A /* CookingSounds.m in Sources */,
 				B82D47BE1C45BBA500D6EA85 /* CookingAppDgn.xcdatamodeld in Sources */,
 				B8717C6C1C41B00100CDA285 /* StepsMainVC.m in Sources */,
 				B8717C8B1C41CCF600CDA285 /* StepTableViewCell.m in Sources */,

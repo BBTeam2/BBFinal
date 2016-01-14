@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AllRecipeSingleton.h"
 @class Recipes;
 @interface StartNewRecipeVC : UIViewController<UITextFieldDelegate,UITextViewDelegate>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
 //properties
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextView *descriptionTextView;

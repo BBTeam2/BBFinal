@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AllRecipeSingleton.h"
 @class Recipes;
-@interface AddIngredientsVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface AddIngredientsVC : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
 //properties
 @property (strong, nonatomic) IBOutlet UITextField *IngredientTextField;
 @property (strong, nonatomic) IBOutlet UITextField *amountTextField;

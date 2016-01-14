@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
+#import "AllRecipeSingleton.h"
 @class Recipes;
 @interface CompleteVC : UIViewController
-{SLComposeViewController *slCVC;}
+{
+    SLComposeViewController *slCVC;
+    AllRecipeSingleton *recipeSingleton;
+}
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) id someImage;
 @property (strong, nonatomic) id someName;

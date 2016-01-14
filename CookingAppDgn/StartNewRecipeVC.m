@@ -13,15 +13,18 @@
 @interface StartNewRecipeVC ()
 
 @end
-NSCharacterSet *AlphaNumericSet;
+NSMutableCharacterSet *AlphaNumericSet;
 NSCharacterSet *NumericSet;
 @implementation StartNewRecipeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
     self.tempRecipe = [[Recipes alloc]initDefaults];
-    AlphaNumericSet = [NSCharacterSet alphanumericCharacterSet];
+    AlphaNumericSet = [NSMutableCharacterSet alphanumericCharacterSet];
+    [AlphaNumericSet formUnionWithCharacterSet:[NSCharacterSet whitespaceCharacterSet]];
     NumericSet = [NSCharacterSet decimalDigitCharacterSet];
     [self.categorySegmentCntrl setSelectedSegmentIndex:-1];
     //set the delegates
@@ -148,6 +151,8 @@ NSCharacterSet *NumericSet;
     if ([[segue identifier]isEqualToString:@"Phase1Complete"]) {
         AddIngredientsVC *destinationVC = segue.destinationViewController;
         destinationVC.someRecipe = self.tempRecipe;
+        //play some sweet sounds
+        [recipeSingleton.cookingSound playSound];
     }
 }
 

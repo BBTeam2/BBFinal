@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CookingSteps.h"
-
-@interface SetupStepVC : UIViewController
+#import "AllRecipeSingleton.h"
+@interface SetupStepVC : UIViewController<UITextViewDelegate>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
 //properties
 @property (strong, nonatomic) IBOutlet UITextView *instructionTextView;
 @property (strong, nonatomic) IBOutlet UIDatePicker *stepDatePicker;

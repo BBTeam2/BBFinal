@@ -26,6 +26,7 @@
         self.AllMyRecipeTab = [[NSMutableArray alloc]init];
         self.FirstTabNavController = nil;
         self.ThirdTabNavController = nil;
+        self.cookingSound = [[CookingSounds alloc]init];
     }
     return self;
 }

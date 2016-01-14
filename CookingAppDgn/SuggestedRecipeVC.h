@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "AllRecipeSingleton.h"
-@interface SuggestedRecipeVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import <CoreLocation/CoreLocation.h>
+@interface SuggestedRecipeVC : UIViewController<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate,NSURLSessionDataDelegate>
 {
     AllRecipeSingleton *recipeSingleton;
+    //Lat and Long variables
+    CLLocationManager *locationManager;
+    int lat;
+    int lng;
+    
 }
 //properties
 @property (strong, nonatomic) IBOutlet UITableView *suggestedReceipeTableView;
@@ -19,4 +25,6 @@
 
 //methods
 -(void)LoadRecipeArray;
+-(void)locationManagerSetup;
+-(void)LoadURL;
 @end

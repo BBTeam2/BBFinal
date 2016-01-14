@@ -18,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
+    self.instructionTextView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +28,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark TextField and TextView Protocals
+-(BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
 /*
 #pragma mark - Navigation
 
@@ -46,6 +58,8 @@
     
     //load the table view
     [previousVC.currentStepsTableView reloadData];
+    //play some sweet sounds
+    [recipeSingleton.cookingSound playSound];
     //Pop the navigation controller stack
     [self.navigationController popViewControllerAnimated:YES];
 }

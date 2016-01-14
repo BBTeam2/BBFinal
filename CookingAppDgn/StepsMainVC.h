@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "Recipes.h"
-
+#import "AllRecipeSingleton.h"
 @interface StepsMainVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    AllRecipeSingleton *recipeSingleton;
+}
 //properties
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIProgressView *totalProgressView;

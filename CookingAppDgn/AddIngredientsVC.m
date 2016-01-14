@@ -20,13 +20,21 @@ NSCharacterSet *NumericSetFoo;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
     self.currentNewRecipe = self.someRecipe;
     CharacterSet = [NSMutableCharacterSet uppercaseLetterCharacterSet];
     [CharacterSet formUnionWithCharacterSet:[NSCharacterSet lowercaseLetterCharacterSet]];
+    [CharacterSet formUnionWithCharacterSet:[NSCharacterSet whitespaceCharacterSet]];
     NumericSetFoo = [NSCharacterSet decimalDigitCharacterSet];
     
     //load the tableView
     [self.ingredientsTableView reloadData];
+    
+    //set the delegates
+    self.IngredientTextField.delegate = self;
+    self.amountTextField.delegate = self;
+    
     
 }
 
@@ -34,7 +42,12 @@ NSCharacterSet *NumericSetFoo;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+#pragma mark TextField and TextView Protocals
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 -(NSString*)AddIngredientName
 {
     //check if the Entry is a valid entry
@@ -83,8 +96,8 @@ NSCharacterSet *NumericSetFoo;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddIngredientCell"];
     NSString *ingredientName = [self.currentNewRecipe.arrIngredients[indexPath.row] strName];
     NSInteger ingredientAmount = [self.currentNewRecipe.arrIngredients[indexPath.row] intAmount];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",ingredientAmount,ingredientName];
-    
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld %@",(long)ingredientAmount,ingredientName];
+    cell.detailTextLabel.text = @"";
     return cell;
 }
 
@@ -103,6 +116,8 @@ NSCharacterSet *NumericSetFoo;
     if ([[segue identifier]isEqualToString:@"Phase2Complete"]) {
         AddStepsVC *destinationVC = segue.destinationViewController;
         destinationVC.stepsSomeRecipe = self.currentNewRecipe;
+        //play some sweet sounds
+        [recipeSingleton.cookingSound playSound];
     }
 }
 

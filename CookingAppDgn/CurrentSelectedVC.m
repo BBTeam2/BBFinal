@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
     // Do any additional setup after loading the view.
     self.myRecipe = self.currentRecipe;
     
@@ -61,6 +63,7 @@
     [ingredientString appendString:[NSString stringWithFormat:@"%ld %@",(long)currentAmount, currentName]];
     //set the Title
     cell.textLabel.text = ingredientString;
+    cell.detailTextLabel.text = @"";
 
     return cell;
 }
@@ -72,6 +75,8 @@
     if ([[segue identifier] isEqualToString:@"CurrentToStart"]) {
         StepsMainVC *stepVC = [segue destinationViewController];
         stepVC.stepRecipe = self.myRecipe;
+        //play some sweet sounds
+        [recipeSingleton.cookingSound playSound];
     }
 
 }

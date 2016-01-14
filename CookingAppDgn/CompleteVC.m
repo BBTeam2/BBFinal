@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //make sure singleton is set up
+    recipeSingleton = [AllRecipeSingleton objectManager];
     // Do any additional setup after loading the view.
     //set the uiimage to the one we will see viable
     self.imageView.image = self.someImage;

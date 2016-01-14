@@ -87,7 +87,8 @@
     //AddIngredientsVC *tab3View2VC = [[self.navigationController childViewControllers]objectAtIndex:1];
     
     
-    
+    //play some sweet sounds
+    [recipeSingleton.cookingSound playSound];
     
     //once everything is saved pop to the RootViewController
     [self.navigationController popToRootViewControllerAnimated:YES];
