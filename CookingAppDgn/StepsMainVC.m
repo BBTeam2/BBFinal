@@ -56,12 +56,14 @@
 -(void)CountDown
 {
     self.currenActiveTimer -=1;
+    self.currentProgress += 1;
     if (self.currenActiveTimer == 0) {
         [self.myStepsRecipe.arrSteps[self.currentActiveStep] setIsComplete:YES];
         self.CompleteTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(CheckIfRecipeIsComplete) userInfo:nil repeats:NO];
         [self.timer invalidate];
         
     }
+    self.totalProgressView.progress = (self.currentProgress / (self.myStepsRecipe.intTotalCookTime*60));
     //reload the tableview
     [self.allStepsTableView reloadData];
 }
@@ -148,6 +150,7 @@
         [newNavBar replaceObjectAtIndex:2 withObject:play];
         
         self.navigationItem.rightBarButtonItems = newNavBar;
+
         self.isPausePlay= NO;
         //stop the timer
         [self.timer invalidate];
@@ -162,6 +165,7 @@
     //force the timer to end and go to the next step and begin the counter for that item
     [self.timer invalidate];
     [self.myStepsRecipe.arrSteps[self.currentActiveStep] setIsComplete:YES];
+    self.currentProgress += self.currenActiveTimer;
     //set the current active step to the next step
     self.currentActiveStep += 1;
     //reset the currentTimer to new value(dont forget to set it to seconds.
