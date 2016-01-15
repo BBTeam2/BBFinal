@@ -40,7 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		81E55B041C3B079C00AF431B /* CookingAppDgn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingAppDgn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E55B041C3B079C00AF431B /* My Inner Chef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Inner Chef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E55B081C3B079D00AF431B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81E55B0A1C3B079D00AF431B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81E55B0B1C3B079D00AF431B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		81E55B051C3B079C00AF431B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81E55B041C3B079C00AF431B /* CookingAppDgn.app */,
+				81E55B041C3B079C00AF431B /* My Inner Chef.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			);
 			name = CookingAppDgn;
 			productName = CookingAppDgn;
-			productReference = 81E55B041C3B079C00AF431B /* CookingAppDgn.app */;
+			productReference = 81E55B041C3B079C00AF431B /* My Inner Chef.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -467,7 +467,7 @@
 				INFOPLIST_FILE = CookingAppDgn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.unlimited.CookingAppDgn;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "My Inner Chef";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -482,7 +482,7 @@
 				INFOPLIST_FILE = CookingAppDgn/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = come.unlimited.CookingAppDgn;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "My Inner Chef";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
